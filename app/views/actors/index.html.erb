@@ -1,0 +1,41 @@
+
+<style>
+	table,tr,th,td{border: 1px solid}
+</style>
+
+<h1 style="text-align: center;">Actores</h1>
+<table>
+	<tr>
+		<th>Foto</th>
+		<th>Nombre</th>
+		<th>Bio</th>
+		<th>Fecha de Nacimiento</th>
+		<th>Lugar de Nacimiento</th>
+		<th>Fecha de Fallecimiento</th>
+		<th>Lugar de Fallecimiento</th>
+	</tr>
+	
+	
+	<% @actors.each do |t| %>
+		<%if t.alive == false %>
+		<tr>
+			<td> <img src="<%= t.image_url%>" alt=""> </td>
+			<td><%= t.name%></td>
+			<td><%= t.bio%></td>
+			<td><%= t.birth_date%></td>
+			<td><%= t.birth_place%></td>
+			<td><%= t.death_date%></td>
+			<td><%= t.death_place%></td>
+		</tr>
+		<% else %>
+		<tr>
+			<td><img src="<%= t.image_url%>" alt=""> </td>
+			<td><%= t.name%></td>
+			<td><%= t.bio%></td>
+			<td><%= t.birth_date%></td>
+			<td><%= t.birth_place%></td>
+		</tr>
+		<% end %>
+
+	<% end %>		
+</table>
