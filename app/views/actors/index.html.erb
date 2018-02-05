@@ -4,7 +4,10 @@
 </style>
 
 <h1 style="text-align: center;">Actores</h1>
-<h2 style="text-align: right;"><a href="http://localhost:3000/actors/new">Crear Actor</a></h2>
+<div class="text-right">
+	<%= link_to "Publicar Actor", new_actors_path_url, class: "btn btn-primary"%>
+</div><br>
+
 <table>
 	<tr>
 		<th>Foto</th>
