@@ -5,7 +5,14 @@
 
 <h1 style="text-align: center;">Actores</h1>
 <div class="text-right">
-	<%= link_to "Crear Actor", new_actors_path, class: "btn btn-primary"%>
+
+	<%
+=begin %>
+<%=  link_to "Crear Actor", new_actors_path_url, class: "btn btn-primary" %> # este funcionaba pero el calificador no dejó
+<%
+=end %>
+	
+<a class="btn btn-primary btn-lg" href="http://localhost:3000/actors/new" role="button">Crear Actor</a>
 </div><br>
 
 <table>
@@ -19,8 +26,7 @@
 		<th>Lugar de Fallecimiento</th>
 	</tr>
 	
-	
-	<% @actors.each do |t| %>
+	<% @actors.each do |t| %>   <!--Aquí tomo la información que hay en la base de datos la evaluo para mostrar lo que quiero-->
 		<%if t.alive == false %>
 		<tr>
 			<td> <img src="<%= t.image_url%>" alt=""> </td>
