@@ -8,12 +8,9 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get '/actors' , to: 'actors#index' #get '/actors' => 'actors#index'
-  #get '/actors/new', to: 'actors#new' , as: '' #el calificador no dejó pasar pero funciona, archivo index.html.erb <%=  link_to "Crear Actor", _url, class: "btn btn-primary" %> # este funcionaba pero el calificador no dejó
-  #get '/actors/new' => 'actors#new' , as: ''   #el calificador no dejó pasar pero funciona
-  get '/actors/new' => 'actors#new'
-  post '/actors'=> 'actors#create'
+  get 'actors/new', to: 'actors#new', as: 'new_actor'
+  post '/actors', to: 'actors#create'
   
-
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
