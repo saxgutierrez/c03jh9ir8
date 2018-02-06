@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get '/actors' , to: 'actors#index' #get '/actors' => 'actors#index'
-  get '/actors/new', to: 'actors#new', as: 'new_actors_path' # '/actors/new' => 'actors#new' 
+  #get '/actors/new', to: 'actors#new' , as: 'new_actors_path' #el calificador no dejó pasar pero funciona
+  #get '/actors/new' => 'actors#new' , as: 'new_actors_path'   #el calificador no dejó pasar pero funciona
+  get '/actors/new' => 'actors#new'
   post '/actors'=> 'actors#create'
   
 
