@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get '/actors' , to: 'actors#index' #get '/actors' => 'actors#index'
-  #get '/actors/new', to: 'actors#new' , as: 'new_actors_path' #el calificador no dejó pasar pero funciona
+  #get '/actors/new', to: 'actors#new' , as: 'new_actors_path' #el calificador no dejó pasar pero funciona, archivo index.html.erb <%=  link_to "Crear Actor", new_actors_path_url, class: "btn btn-primary" %> # este funcionaba pero el calificador no dejó
   #get '/actors/new' => 'actors#new' , as: 'new_actors_path'   #el calificador no dejó pasar pero funciona
   get '/actors/new' => 'actors#new'
   post '/actors'=> 'actors#create'
